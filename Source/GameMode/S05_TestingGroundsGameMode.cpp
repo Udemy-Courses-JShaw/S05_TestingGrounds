@@ -9,7 +9,7 @@ AS05_TestingGroundsGameMode::AS05_TestingGroundsGameMode()
 	: Super()
 {
 	// set default pawn class to our Blueprinted character
-	static ConstructorHelpers::FClassFinder<APawn> PlayerPawnClassFinder(TEXT("/Game/BluePrints/FirstPersonCharacter"));
+	static ConstructorHelpers::FClassFinder<APawn> PlayerPawnClassFinder(TEXT("/Game/BluePrints/BP_FirstPersonCharacter")); //added "BP_"
 	DefaultPawnClass = PlayerPawnClassFinder.Class;
 
 	// use our custom HUD class
