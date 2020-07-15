@@ -59,7 +59,8 @@ void AS05_TestingGroundsCharacter::BeginPlay()
 	Gun->AttachToComponent(Mesh1P, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("GripPoint"));
 
 	//Anim Instance
-	Gun->AnimInstance = Mesh1P->GetAnimInstance();
+	Gun->AnimInstance1p = Mesh1P->GetAnimInstance();
+	//Gun->AnimInstance3p = Mesh->GetAnimInstance();
 
 	// Bind fire event
 	InputComponent->BindAction("Fire", IE_Pressed, Gun, &AWeapon::Fire);
